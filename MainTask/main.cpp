@@ -1,8 +1,6 @@
 #include "Student.h"
 
 int main() {
-	int n = 0;
-
 	Student st1, st2;
 
 	st1.name = "Stepan";
