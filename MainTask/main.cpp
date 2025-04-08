@@ -12,10 +12,9 @@ int main() {
 	st2.age = 15;
 	st2.mark = 9.99;
 	st2.alive = false;
-
-	Student st = st1.mark > st2.mark ? st1 : st2;
-
-	cout << "Best student is: " << st.name << ".\n";
+	
+	cout << st1.getString() << endl;
+	cout << st2.getString() << endl;
 
 	return 0;
 }
