@@ -13,6 +13,14 @@ int main() {
 	st2.mark = 9.99;
 	st2.alive = false;
 	
+	cout << "Before: " << endl;
+	cout << st1.getString() << endl;
+	cout << st2.getString() << endl;
+
+	st1 = st2;
+	st1.name = "Bogdan";
+
+	cout << "After: " << endl;
 	cout << st1.getString() << endl;
 	cout << st2.getString() << endl;
 
