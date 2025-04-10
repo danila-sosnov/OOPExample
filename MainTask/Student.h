@@ -4,14 +4,26 @@ using namespace std;
 
 class Student {
 public:
-	//fields
+	// fields
 	string name;
 	int age;
 	double mark;
 	bool alive;
 
-	//methods
-	string getString()
+	// constructors
+
+	// default-constructor or constructors without arguments
+
+	Student()
+	{
+		cout << "default-constructor..." << endl;
+		name = "no name";
+		age = 13;
+		mark = 4.0;
+		alive = true;
+	}
+	// methods
+	string toString()
 	{
 		string s = "Name: " + name;
 		s += ", age: " + to_string(age)
