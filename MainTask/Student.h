@@ -14,14 +14,44 @@ public:
 
 	// default-constructor or constructors without arguments
 
-	Student()
+	/*Student()
 	{
 		cout << "default-constructor..." << endl;
 		name = "no name";
 		age = 13;
 		mark = 4.0;
 		alive = true;
-	}
+	}*/
+
+	// constructors with arguments
+
+	/*Student(string nm)
+	{
+		cout << "constructor with arguments (name)..." << endl;
+		name = nm;
+		age = 13;
+		mark = 4.0;
+		alive = true;
+	}*/
+	// constructor with arguments
+	//Student(string nm, int a)
+	//{
+	//	cout << "constructor with arguments (name,age)..." << endl;
+	//	name = nm;
+	//	age = a < 13 ? 13 : a;
+	//	mark = 4.0;
+	//	alive = true;
+	//}
+	// canonical-constructor
+	/*Student(string nm, int a, double m, bool al)
+	{
+		cout << "canonical-constructor..." << endl;
+		name = nm;
+		age = a < 13 ? 13 : a;
+		mark = m;
+		alive = al;
+	}*/
+
 	// methods
 	string toString()
 	{
