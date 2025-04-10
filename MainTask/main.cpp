@@ -13,10 +13,5 @@ int main() {
 	cout << student4.toString() << endl;
 	cout << student5.toString() << endl;
 
-
-
-	
-
-
 	return 0;
 }
