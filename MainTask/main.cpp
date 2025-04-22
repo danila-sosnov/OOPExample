@@ -2,8 +2,8 @@
 
 int main() {
 	Student student("Alex", 14, 5, true);
-
-
+	
+	Student* pStudent = new Student;
 
 	cout << student.toString() << endl;
 	
