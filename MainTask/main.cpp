@@ -1,17 +1,27 @@
 #include "Student.h"
 
 int main() {
-	Student student1;
-	Student student2("Alex");
-	Student student3("Matvey", 14);
-	Student student4("Bogdan", 15, 10, true);
-	Student student5(student4);
+	Student student("Alex", 14, 5, true);
 
-	cout << student1.toString() << endl;
-	cout << student2.toString() << endl;
-	cout << student3.toString() << endl;
-	cout << student4.toString() << endl;
-	cout << student5.toString() << endl;
+
+
+	cout << student.toString() << endl;
+	
+	for (int i = 0; i < student.countMarks; i++)
+	{
+		student.setMark(i, rand() % 7 + 4);
+
+	}
+
+	cout << student.toString() << endl;
+
+	cout << "Student's marks: ";
+
+	for (int i = 0; i < student.countMarks; i++)
+	{
+		cout << student.getMark(i) << " ";
+
+	}
 
 	return 0;
 }
