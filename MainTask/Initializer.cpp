@@ -16,7 +16,7 @@ void Initializer::init(Student*& list, int count) {
 	int minAge = 13;
 	int maxAge = 18;
 
-	int minMark = 0;
+	int minMark = 6;
 	int maxMark = 10;
 
 	for (int i = 0; i < count; i++)
