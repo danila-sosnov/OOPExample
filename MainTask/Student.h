@@ -2,198 +2,42 @@
 #include <string>
 using namespace std;
 
-// Entity-class
+
 
 class Student {
 private:
-	// fields
+	
 	string name;
 	int age;
 	int* marks;
 	int countMarks;
 	bool alive;
 
-	string convert()
-	{
-		string s = "[";
+	string convert();
 
-		if (this->countMarks > 0)
-		{
-			for (int i = 0; i < this->countMarks - 1; i++)
-			{
-				s += to_string(this->marks[i]) + ", ";
-			}
-
-			s += to_string(this->marks[this->countMarks - 1]);
-		}
-
-		s += "]";
-
-		return s;
-
-	}
-
-	
 public:
 
-	string getName()
-	{
-		return name;
-	}
+	Student() : Student("no name", 13, 10, true) { }
+	Student(string name) : Student(name, 13) { }
+	Student(string name, int age) : Student(name, age, 0, true) { }
+	Student(string name, int age, int countMarks, bool alive);
+	Student(const Student& student);
+	~Student();
 
-	void setName(string name)
-	{
-		this->name = name;
-	}
+	string getName();
+	void setName(string name);
+	int getAge();
+	void setAge(int age);
+	int* getMarks();
+	void setMarks(int* marks, int count);
+	int getCountMarks();
+	bool isAlive();
+	void setAlive(bool alive);
+	int getMark(int index);
+	void setMark(int index, int mark);
 
-	int getAge()
-	{
-		return age;
-	}
+	double getAverageMark();
+	
+	string toString();
 
-	void setAge(int age)
-	{
-		if (age >= 13 && age <= 18)
-		{
-			this->age = age;
-		}
-	}
-
-	int* getMarks()
-	{
-		return marks;
-	}
-
-	void setMarks(int* marks, int count)
-	{
-		this->marks = marks;
-		countMarks = count;
-	}
-
-	int getCountMarks()
-	{
-		return countMarks;
-	}
-
-	bool isAlive()
-	{
-		return alive;
-	}
-
-	void setAlive(bool alive)
-	{
-		this->alive = alive;
-	}
-
-	double getAverageMark()
-	{
-		double sum = 0;
-
-		for (int i = 0; i < countMarks; i++)
-		{
-			sum += marks[i];
-		}
-
-		return sum / countMarks;
-	}
-
-	// constructors
-
-	// default-constructor or constructors without arguments
-
-	Student() : Student("no name", 13, 10, true)
-	{
-		//cout << "default-constructor..." << endl;
-	}
-
-	// constructors with arguments
-
-	Student(string name) : Student(name, 13)
-	{
-		//cout << "constructor with arguments (name)..." << endl;
-	}
-
-	 // constructor with arguments
-
-	Student(string name, int age) : Student(name, age, 0, true)
-	{
-		//cout << "constructor with arguments (name,age)..." << endl;
-	}
-
-	// canonical-constructor
-	 Student(string name, int age, int countMarks, bool alive)
-	 {
-		// cout << "canonical-constructor..." << endl;
-		 this->name = name;
-		 this->age = age < 13 ? 13 : age;
-		 this->countMarks = countMarks;
-		 marks = new int[countMarks];
-
-		 for (int i = 0; i < countMarks; i++)
-		 {
-			 marks[i] = 4;
-		 }
-
-		 this->alive = alive;
-		 
-	 }
-
-	 // copy-constructor
-
-	 Student(const Student& student) : Student(student.name,
-		 student.age, student.countMarks,student.alive)
-	 {
-		 //cout << "copy-constructor..." << endl;		 
-		 for (int i = 0; i < countMarks; i++)
-		 {
-			 marks[i] = student.marks[i];
-		 }
-
-	 }
-
-	 // destructor
-	 ~Student()
-	 {
-		 //cout << "destructor..." << endl;
-
-		 if (countMarks != 0)
-		 {
-			 delete[] this->marks;
-		 }
-		 	 
-	 }
-
-	// methods
-	string toString()
-	{
-		string s = "Name: " + this->name;
-		s += ", age: " + to_string(this->age)
-		+ ", marks: " + this->convert()
-		+ ", alive: " + (this->alive ? "yes" : "no");
-
-		return s;
-	}
-
-	int getMark(int index)
-	{
-		if (countMarks == 0 || index < 0
-			|| index >= countMarks)
-		{
-			return -1;
-		}
-
-		return marks[index];
-	}
-
-	void setMark(int index, int mark)
-	{
-		if (countMarks == 0 || index < 0 || index >= countMarks 
-			|| mark < 0 || mark > 10)
-		{
-			return;
-		}
-
-		marks[index] = mark;
-	}
 };
-
