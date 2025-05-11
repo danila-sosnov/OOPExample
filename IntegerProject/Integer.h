@@ -13,7 +13,7 @@ public:
 	Integer mul(Integer interer);
 	Integer div(Integer interer);
 	
-	Integer() : number(0) {};
+	Integer() : Integer(0) {}
 	Integer(int number);
 	
 	int getNumber();

@@ -1,24 +1,24 @@
 #include "Integer.h"
 
-//Integer Integer::add(Integer integer)
-//{
-//
-//}
+Integer Integer::add(Integer integer)
+{
+	return Integer(number + integer.number);
+}
 
 Integer Integer::sub(Integer integer)
 {
 	return Integer(number - integer.number);
 }
 
-//Integer Integer::mul(Integer integer)
-//{
-//
-//}
-//
-//Integer Integer::div(Integer integer)
-//{
-//
-//}
+Integer Integer::mul(Integer integer)
+{
+	return Integer(number * integer.number);
+}
+
+Integer Integer::div(Integer integer)
+{
+	return Integer(number / integer.number);
+}
 
 Integer::Integer(int number)
 {
