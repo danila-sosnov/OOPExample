@@ -8,10 +8,10 @@ private:
 
 public:
 
-	Integer add(Integer interer);
-	Integer sub(Integer interer);
-	Integer mul(Integer interer);
-	Integer div(Integer interer);
+	Integer add(Integer integer);
+	Integer sub(Integer integer);
+	Integer mul(Integer integer);
+	Integer div(Integer integer);
 	
 	Integer() : Integer(0) {}
 	Integer(int number);

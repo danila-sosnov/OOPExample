@@ -1,13 +1,10 @@
-#include "Initializer.h"
+#pragma once
+#include "Group.h"
 
-
+// function class
 class Manager
 {
 public:
-
-	Student* findBestStudents(Student* list, int count, int& bestCount);
-	Student* findWorstStudents(Student* list, int count, int& bestCount);
-
-
+	Group findBestStudents(Group group);
+	Group findWorstStudents(Group group);
 };
-
