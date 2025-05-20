@@ -18,12 +18,10 @@ void Initializer::init(Group group) {
 
 	for (int i = 0; i < group.getCapacity(); i++)
 	{
-
 		group.get(i).setName(names[rand() % 15]);
 		group.get(i).setAge(rand() % (maxAge - minAge + 1) + minAge);
 		for (int j = 0; j < group.get(i).getCountMarks(); j++)
-		{
-					
+		{			
 			group.get(i).setMark(j, rand() % (maxMark - minMark + 1) + minMark);
 		}
 	}

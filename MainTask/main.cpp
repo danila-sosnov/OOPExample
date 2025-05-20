@@ -1,8 +1,7 @@
-#include "Manager.h"
 #include "Initializer.h"
+#include "Manager.h"
 
 int main() {
-	
 	Initializer initializer;
 	Manager manager;
 
@@ -17,21 +16,13 @@ int main() {
 
 	cout << "All students:\n";
 	cout << "List of students:\n" << group.toString() << endl;
-	
 
 	int size = 0;
-	
 	Group bestGroup = manager.findBestStudents(group);
-	cout << "\nList of best students: ";
-	
+	cout << "\nList of best students:\n" << bestGroup.toString() << endl;
 
 	Group worstGroup = manager.findWorstStudents(group);
-	cout << "\nList of worst students: ";
-	
-
-
-
-	
+	cout << "\nList of worst students:\n" << worstGroup.toString() << endl;
 
 	return 0;
 }
