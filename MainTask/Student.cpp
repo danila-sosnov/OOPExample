@@ -69,7 +69,6 @@ double Student::getAverageMark() {
 
 // canonical-constructor
 Student::Student(string name, int age, int countMark, bool alive) {
-	//cout << "canonical-constructor ..." << endl;
 	this->name = name;
 	this->age = age;
 	this->countMarks = countMark;
@@ -87,7 +86,6 @@ Student::Student(string name, int age, int countMark, bool alive) {
 Student::Student(const Student& student) : Student(student.name,
 	student.age, student.countMarks, student.alive)
 {
-	//cout << "copy-constructor ..." << endl;
 
 	for (int i = 0; i < countMarks; i++)
 	{
@@ -97,7 +95,6 @@ Student::Student(const Student& student) : Student(student.name,
 
 // destructor
 Student::~Student() {
-	//cout << "destructor..." << endl;
 
 	if (countMarks > 0) {
 		delete[] this->marks;
