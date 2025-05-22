@@ -6,20 +6,16 @@ public:
 
 	string company;
 	double salary;
+	string name;
 
 
-	Worker()
-	{
-		cout << "Worker default constuctor." << endl;
-	}
-
+	Worker();
+	~Worker();
 	Worker(string name, int age, bool gender, string company, double salary);
 	Worker(const Worker& worker);
 
-	~Worker()
-	{
-		cout << "Worker destructor." << endl;
-	}
+	
+	
 
 	string getCompany();
 	void setCompany(string company);

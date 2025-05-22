@@ -6,11 +6,10 @@ Worker::Worker() : Worker("", 0, false, "", 0.0)
 	cout << "Worker default constuctor." << endl;
 }
 
-Worker::Worker(string name, int age, bool gender, string company, double salary)
+Worker::Worker(string name, int age, bool gender, string company, double salary) :
+	Human(name, age, gender)
 {
-	this->name = name;
-	this->age = age;
-	this->gender = gender;
+	
 	this->company = company;
 	this->salary = salary;
 }
@@ -41,12 +40,12 @@ void Worker::setSalary(double salary)
 }
 string Worker::toString()
 {
-	string s = "";
+	string s = Human::toString();
 
-	s += name + ", age = " + to_string(age)
-		+ ", gender: " + (gender ? "male" : "female")
-		+ ", company = " + company
-		+ ", salary = " + to_string(salary);
+	s += ", name = " + Human::name;
+	s += ", salary = " + to_string(salary)
+		+ ", company = " + company;
+		
 
 	return s;
 

@@ -3,12 +3,14 @@
 class Human
 {
 
-public:
-	
+protected:
+
 	string name;
 	int age;
 	bool gender;
 
+public:
+	
 	Human();
 	Human(string name, int age, bool gender);
 	Human(const Human& human);
