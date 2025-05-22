@@ -122,6 +122,7 @@
     <ClCompile Include="ArrayList.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="main2.cpp" />
+    <ClCompile Include="main3.cpp" />
     <ClCompile Include="Queue.cpp" />
     <ClCompile Include="Stack.cpp" />
   </ItemGroup>

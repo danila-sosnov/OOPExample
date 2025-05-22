@@ -8,6 +8,7 @@ private:
 	int count;
 	int capacity;
 public:
+
 	Group();
 	Group(int capacity);
 	Group(Student* list, int count);
