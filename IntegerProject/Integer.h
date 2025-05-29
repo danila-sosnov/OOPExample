@@ -2,22 +2,23 @@
 class Integer
 {
 private:
-	int number;
+	int value;
 	
 
 
 public:
+	
+	Integer() : value(0) {}
+	Integer(int value) : value(value) {}
+	
+	int getValue() { return value; }
+	void setValue(int value) { this->value = value; }
 
-	Integer add(Integer interer);
-	Integer sub(Integer interer);
-	Integer mul(Integer interer);
-	Integer div(Integer interer);
-	
-	Integer() : number(0) {};
-	Integer(int number);
-	
-	int getNumber();
-	void setNumber(int number);
+	Integer sum(Integer right);
+	Integer sub(Integer right);
+	Integer mul(Integer right);
+	Integer div(Integer right);
+	Integer mod(Integer right);
 	
 
 	

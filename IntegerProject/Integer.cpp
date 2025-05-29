@@ -1,36 +1,27 @@
 #include "Integer.h"
 
-//Integer Integer::add(Integer integer)
-//{
-//
-//}
-
-Integer Integer::sub(Integer integer)
+Integer Integer::sum(Integer right)
 {
-	return Integer(number - integer.number);
+	return Integer(value + right.value);
 }
 
-//Integer Integer::mul(Integer integer)
-//{
-//
-//}
-//
-//Integer Integer::div(Integer integer)
-//{
-//
-//}
-
-Integer::Integer(int number)
+Integer Integer::sub(Integer right)
 {
-	this->number = number;
+	return Integer(value - right.value);
 }
 
-int Integer::getNumber()
+Integer Integer::mul(Integer right)
 {
-	return number;
+	return Integer(value * right.value);
 }
 
-void Integer::setNumber(int number)
+Integer Integer::div(Integer right)
 {
-	this->number = number;
+	return Integer(value / right.value);
 }
+
+Integer Integer::mod(Integer right)
+{
+	return Integer(value % right.value);
+}
+

@@ -1,14 +1,16 @@
 #include <iostream>
+#include <string>
 #include "Integer.h"
 using namespace std;
 
 
 int main() {
 
-	Integer integer(5);
-	Integer integer1(6);
+	Integer i1(10);
+	Integer i2(20);
 
-	cout << integer.sub(integer1).getNumber();
+	cout << i1.getValue() << " * " << i2.getValue()
+		<< " = " << i1.mul(i2).getValue() << endl;
 
 	return 0;
 }
