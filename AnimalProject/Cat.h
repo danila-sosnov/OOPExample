@@ -9,7 +9,7 @@ public:
 
 	void getVoice() override
 	{
-		cout << "Meooooooooooww......";
+		cout << "Meooooooooooww......" << endl;
 	}
 };
 

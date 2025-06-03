@@ -120,12 +120,14 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="animal.cpp" />
+    <ClCompile Include="Crocodile.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="SoundStudio.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="animal.h" />
     <ClInclude Include="Cat.h" />
+    <ClInclude Include="Crocodile.h" />
     <ClInclude Include="Dog.h" />
     <ClInclude Include="main.h" />
     <ClInclude Include="SoundStudio.h" />

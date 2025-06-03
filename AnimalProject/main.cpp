@@ -1,6 +1,7 @@
 #include "SoundStudio.h"
 #include "Dog.h"
 #include "Cat.h"
+#include "Crocodile.h"
 
 int main()
 {
@@ -8,9 +9,14 @@ int main()
 
 	Dog* dog = new Dog("Laika");
 	Cat* cat = new Cat("Adel");
+	Crocodile* crocodile = new Crocodile("Pushok");
 
-	studio.makeItSound(dog);
-	studio.makeItSound(cat);
+	int size = 3;
+
+	animal** animals = new animal * [size] {dog, cat, crocodile};
+
+	studio.makeItSound(animals, size);
+	
 
 	return 0;
 }
