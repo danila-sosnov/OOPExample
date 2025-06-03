@@ -119,10 +119,16 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="animal.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="SoundStudio.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="animal.h" />
+    <ClInclude Include="Cat.h" />
+    <ClInclude Include="Dog.h" />
     <ClInclude Include="main.h" />
+    <ClInclude Include="SoundStudio.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

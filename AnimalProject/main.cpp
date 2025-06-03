@@ -1,55 +1,16 @@
-#include "main.h"
-
-class A
-{
-public:
-
-	virtual void show()
-	{		
-		cout << "class A" << endl;
-	}
-};
-
-class B : public A
-{
-public:
-
-	void show()  override
-	{
-		cout << "class B" << endl;
-	}
-};
-
-class C : public A
-{
-	void show()  override
-	{
-		cout << "class C" << endl;
-	}
-};
-
-class D : public C
-{
-	void show() override
-	{
-		cout << "class D" << endl;
-	}
-};
+#include "SoundStudio.h"
+#include "Dog.h"
+#include "Cat.h"
 
 int main()
 {
-	A* a = new A();
-	a->show();
-	delete a;
+	SoundStudio studio;
 
-	a = new B();
-	a->show();
+	Dog* dog = new Dog("Laika");
+	Cat* cat = new Cat("Adel");
 
-	a = new C();
-	a->show();
-
-	a = new D();
-	a->show();
+	studio.makeItSound(dog);
+	studio.makeItSound(cat);
 
 	return 0;
 }
