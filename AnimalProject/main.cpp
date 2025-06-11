@@ -2,21 +2,21 @@
 #include "Dog.h"
 #include "Cat.h"
 #include "Crocodile.h"
+#include "animal.h"
 
 int main()
 {
-	SoundStudio studio;
+	animal a1, a2, a3;
 
-	Dog* dog = new Dog("Laika");
-	Cat* cat = new Cat("Adel");
-	Crocodile* crocodile = new Crocodile("Pushok");
+	cout << "Number of animals: " << a3.getCount() << endl;
+	cout << "Number of animals: " << animal::getCount() << endl;
 
-	int size = 3;
+	{
+		animal a4, a5;
+		cout << "Number of animals: " << animal::getCount() << endl;
+	}
 
-	animal** animals = new animal * [size] {dog, cat, crocodile};
-
-	studio.makeItSound(animals, size);
-	
+	cout << "Number of animals: " << animal::getCount() << endl;
 
 	return 0;
 }

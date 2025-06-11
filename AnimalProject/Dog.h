@@ -1,15 +1,15 @@
-#pragma once
-#include "main.h"
-
-class Dog : public animal
-{
-public:
-
-	Dog(string name) : animal(name) {}
-
-	void getVoice() override
-	{
-		cout << "gaaaaaw...gaaaw....." << endl;
-	}
-};
-
+//#pragma once
+//#include "main.h"
+//
+//class Dog : public animal
+//{
+//public:
+//
+//	Dog(string name) : animal(name) {}
+//
+//	void getVoice() 
+//	{
+//		cout << "gaaaaaw...gaaaw....." << endl;
+//	}
+//};
+//

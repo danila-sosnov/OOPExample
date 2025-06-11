@@ -3,15 +3,31 @@
 
 class animal
 {
+
+private:
+
+	static int count;
+	static const int MAX = 10;
+
 public:
 
 	string name;
-
+	
+	animal()
+	{
+		count++;
+	}
 	animal(string name) : name(name) {}
 
-	virtual void getVoice()
+	~animal()
 	{
-		cout << "........" << endl;
+		count--;
 	}
+
+	static int getCount();
+	
+	string toString();
+
+	
 };
 
